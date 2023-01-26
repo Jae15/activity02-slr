@@ -3,6 +3,24 @@ title: "Activity 2 - Day 1"
 output: github_document
 ---
 
-```{setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+# install.packages("tidyverse")
+# install.packages("tidymodels")
+library(tidyverse)
+library(tidymodels)
 ```
+
+
+```{r}
+read_csv = read_csv('https://www.openintro.org/data/csv/hfi.csv')
+```
+```{r}
+hfi<-read_csv
+```
+```{r}
+hfi_2016<-hfi %>%
+  filter(year == 2016)
+```
+```
+
